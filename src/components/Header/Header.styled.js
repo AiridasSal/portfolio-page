@@ -23,6 +23,7 @@ export const WidthWrapper = styled.div`
 `;
 export const Nav = styled.nav`
   flex-grow: 1;
+
 `;
 
 export const Ulist = styled.ul`
@@ -33,6 +34,14 @@ export const Ulist = styled.ul`
   column-gap: var(--spacing-lg);
   margin: 0;
   padding: 0;
+
+  @media screen and (max-width: 780px) {
+    column-gap: var(--spacing-xs);
+  }
+
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 export const ListItem = styled.li`

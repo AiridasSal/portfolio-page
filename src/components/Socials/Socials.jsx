@@ -23,8 +23,16 @@ const SocialLink = styled.a`
   font-size: 24px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+  color: var(--white-color);
+
+  @keyframes myAnim {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
 
   &:hover {
+    animation: myAnim 0.5s ease 0s 1 normal forwards; 
     color: var(--warning-color);
   }
 `;

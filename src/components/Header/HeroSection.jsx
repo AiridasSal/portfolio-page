@@ -67,11 +67,7 @@ const HeroButton = styled.button`
   transition: background-color 0.3s;
   margin-top: 40px;
 
-  @keyframes myAnim {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-  }
+ 
 
   &:hover {
     animation: myAnim 0.5s ease 0s 1 normal forwards; 

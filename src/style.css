@@ -80,3 +80,9 @@ body {
   /* background: repeating-linear-gradient(-45deg, var(--primary-color), var(--primary-color) 20px, var(--secondary-color) 20px, var(--secondary-color) 40px, var(--success-color) 40px, var(--success-color) 60px); */
   /* background: repeating-linear-gradient(135deg, var(--primary-color) 0, var(--primary-color) 10px, var(--secondary-color) 10px, var(--secondary-color) 30px, var(--success-color) 30px, var(--success-color) 50px); */
 }
+
+@keyframes myAnim {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
