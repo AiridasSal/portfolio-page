@@ -19,7 +19,7 @@ const SocialsContainer = styled.div`
   align-items: center;
 `;
 
-const SocialLink = styled.a`
+export const SocialLink = styled.a`
   font-size: 24px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;

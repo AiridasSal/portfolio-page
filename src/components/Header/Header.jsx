@@ -4,6 +4,10 @@ import { useLocation } from 'react-router-dom';
 import Logo from '../Logo/Logo';
 import logo2 from '../../assets/logo.png'
 import styled from 'styled-components';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { SocialLink } from '../Socials/Socials';
+
 import {
   LogRegContainer,
   HeaderWrapper,
@@ -32,13 +36,13 @@ height:80px;
 `
 const Header = () => {
   const location = useLocation();
+  
   return (
     <>
       {location.pathname !== '/login' && location.pathname !== '/register' && (
         <HeaderWrapper>
           <WidthWrapper>
             <LogoContainer><BrandName>INNOVACODEWEB</BrandName></LogoContainer>
-           
             <Nav>
               <Ulist>
                 <ListItem>
@@ -55,7 +59,10 @@ const Header = () => {
                 </ListItem>
               </Ulist>
             </Nav>
-            </WidthWrapper>
+            <SocialLink >
+              <FontAwesomeIcon icon={faBars} />
+            </SocialLink>
+          </WidthWrapper>
         </HeaderWrapper>
       )}
     </>
