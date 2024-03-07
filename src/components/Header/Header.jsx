@@ -6,7 +6,6 @@ import logo2 from '../../assets/logo.png'
 import styled from 'styled-components';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { SocialLink } from '../Socials/Socials';
 
 import {
   LogRegContainer,
@@ -17,7 +16,9 @@ import {
   Ulist,
   Container,
   WidthWrapper,
+  MobileMenu
 } from './Header.styled';
+import { useState } from 'react';
 
 const LogoContainer = styled.div`
   display:flex;
@@ -34,9 +35,20 @@ const LogoPng = styled.img`
 width:80px;
 height:80px;
 `
+
+
 const Header = () => {
   const location = useLocation();
-  
+  const [navStyle, setNavStyle] = useState('row');
+  const [displayStyle, setDisplayStyle] = useState('flex');
+
+  const handleClick = () => {
+    const newNavStyle = navStyle === 'row' ? 'column' : 'row';
+    const newDisplayStyle = displayStyle === 'flex' ? 'none' : 'flex';
+    setNavStyle(newNavStyle);
+    setDisplayStyle(newDisplayStyle);
+  };
+
   return (
     <>
       {location.pathname !== '/login' && location.pathname !== '/register' && (
@@ -44,7 +56,7 @@ const Header = () => {
           <WidthWrapper>
             <LogoContainer><BrandName>INNOVACODEWEB</BrandName></LogoContainer>
             <Nav>
-              <Ulist>
+            <Ulist flexDirection={navStyle} display={displayStyle}>
                 <ListItem>
                   <NavLink to="/">HOME</NavLink>
                 </ListItem>
@@ -59,9 +71,9 @@ const Header = () => {
                 </ListItem>
               </Ulist>
             </Nav>
-            <SocialLink >
-              <FontAwesomeIcon icon={faBars} />
-            </SocialLink>
+            <MobileMenu onClick={handleClick}>              
+            <FontAwesomeIcon icon={faBars} />
+            </MobileMenu>
           </WidthWrapper>
         </HeaderWrapper>
       )}
