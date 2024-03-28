@@ -36,11 +36,11 @@ export const Ulist = styled.ul`
   margin: 0;
   padding: 0;
 
-  @media screen and (max-width: 780px) {
-    column-gap: var(--spacing-xs);
-  }
+  // @media screen and (max-width: 780px) {
+  //   column-gap: var(--spacing-xs);
+  // }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 600px) {
     display: ${props => props.display};
   }
 `;
@@ -106,6 +106,7 @@ export const Button = styled.button`
     color: var(--gray-dark);
     cursor: not-allowed;
   }
+ 
 `;
 export const LogRegContainer = styled.ul`
   list-style-type: none;
@@ -130,5 +131,9 @@ color: var(--white-color);
 &:hover {
   animation: myAnim 0.5s ease 0s 1 normal forwards; 
   color: var(--warning-color);
+}
+@media screen and (min-width: 600px) {
+
+  display: none;
 }
 `;

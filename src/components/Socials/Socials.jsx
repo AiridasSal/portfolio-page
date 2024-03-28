@@ -38,22 +38,22 @@ export const SocialLink = styled.a`
 `;
 
 const Socials = () => {
-  const navigate = useNavigate();
 
   return (
     <SocialsContainer>
-      <SocialLink onClick={() => navigate("https://www.linkedin.com/", { replace: true })}>
-        <FontAwesomeIcon icon={faLinkedin} />
-      </SocialLink>
-      <SocialLink onClick={() => navigate("https://www.facebook.com/", { replace: true })}>
-        <FontAwesomeIcon icon={faFacebook} />
-      </SocialLink>
-      <SocialLink onClick={() => navigate("https://www.instagram.com/", { replace: true })}>
-        <FontAwesomeIcon icon={faInstagram} />
-      </SocialLink>
-      <SocialLink onClick={() => navigate("https://www.github.com/", { replace: true })}>
-        <FontAwesomeIcon icon={faGithub} />
-      </SocialLink>
+    <SocialLink href="https://www.linkedin.com/" target="_blank">
+  <FontAwesomeIcon icon={faLinkedin} />
+</SocialLink>
+<SocialLink href="https://www.facebook.com/" target="_blank">
+  <FontAwesomeIcon icon={faFacebook} />
+</SocialLink>
+<SocialLink href="https://www.instagram.com/" target="_blank">
+  <FontAwesomeIcon icon={faInstagram} />
+</SocialLink>
+<SocialLink href="https://www.github.com/" target="_blank">
+  <FontAwesomeIcon icon={faGithub} />
+</SocialLink>
+
     </SocialsContainer>
   );
 };

@@ -40,7 +40,7 @@ height:80px;
 const Header = () => {
   const location = useLocation();
   const [navStyle, setNavStyle] = useState('row');
-  const [displayStyle, setDisplayStyle] = useState('flex');
+  const [displayStyle, setDisplayStyle] = useState('none');
 
   const handleClick = () => {
     const newNavStyle = navStyle === 'row' ? 'column' : 'row';
